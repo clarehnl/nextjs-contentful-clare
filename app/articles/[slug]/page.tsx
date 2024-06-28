@@ -3,6 +3,7 @@ import { knowledgeArticle } from "@/utils/types"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { draftMode } from "next/headers"
 
 
 // we can improve performance by retrieving all articles and rendering the detail page at build time (static rendering)
@@ -15,7 +16,9 @@ export async function generateStaticParams() {
 }
 
 export default async function KnowledgeArticle({params}: {params: {slug: string}}) {
-    const article = await getArticle(params.slug)
+  // see if we are on draft preview mode
+    const { isEnabled } = draftMode()
+    const article = await getArticle(params.slug, isEnabled)
     if (!article) {
       notFound()
     }

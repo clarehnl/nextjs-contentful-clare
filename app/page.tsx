@@ -1,10 +1,13 @@
 import { getAllArticles } from "@/lib/api"
 import { knowledgeArticle } from "@/utils/types";
+import { draftMode } from "next/headers";
 import Image from "next/image"
 import Link from "next/link";
 
 export default async function Home() {
-  const articles = await getAllArticles();
+  // see if we are on draft preview mode
+  const { isEnabled } = draftMode()
+  const articles = await getAllArticles(3, isEnabled)
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white">
       <section className="w-full pt-12">
