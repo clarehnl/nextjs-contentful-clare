@@ -25,3 +25,66 @@ export type knowledgeArticle = {
     url: string
   }
 }
+
+export type heroBanner = {
+  sys: {
+    id: string
+  }
+  slug: string
+  heroBackground: boolean
+  heroHeadline: string
+  heroHeadlineColour: string
+  descriptionTextColour: boolean
+  heroBlockButton: {
+    buttonLink: string
+    buttonText: string
+  }
+  phoneNumberPreferTalkText: string
+  phoneNumberPreferTalkTextColour: string
+  phoneNumber: string
+  phoneNumberTextColour: string
+  prepositionText: string
+  prepositionTextColour: string
+  blockTopMargin: number
+  heroBannerImage: {
+    url: string
+  }
+  prepositionIcon: {
+    url: string
+  }
+  headlineDescription: {
+    links: {
+      assets: {
+        block: {
+          sys: {
+            id: string
+          }
+          url: string,
+          description: string
+        }
+      }
+    },
+    json: any
+  }
+}
+
+export type textBlock = {
+  sys: {
+    id: string
+  }
+  slug: string,
+  content: {
+    links: {
+      assets: {
+        block: {
+          sys: {
+            id: string
+          }
+          url: string,
+          description: string
+        }
+      }
+    }
+  },
+  contentTextColour: string
+}
