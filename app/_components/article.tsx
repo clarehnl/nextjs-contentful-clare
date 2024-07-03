@@ -12,8 +12,7 @@ export default async function Article({slug}: {slug: string}) {
     }
 
     return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white">
-      <section className="w-full">
+      <section className="w-full px-16">
         <div className="container space-y-12 px-4 md:px-6">
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
@@ -41,6 +40,5 @@ export default async function Article({slug}: {slug: string}) {
           </div>
         </div>
       </section>
-    </main>
   )
 }

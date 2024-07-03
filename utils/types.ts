@@ -88,3 +88,19 @@ export type textBlock = {
   },
   contentTextColour: string
 }
+
+export type FlexPage = {
+  sys: {
+      id: string
+  }
+  slug: string
+  title: string
+  sectionsCollection: {
+      items: FlexiblePageContent[]
+  }
+}
+
+export type FlexiblePageContent = {
+  __typename: string
+  slug: string
+}

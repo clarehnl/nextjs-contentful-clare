@@ -12,7 +12,7 @@ export default async function TextBlock({slug}: {slug: string}) {
 
     return (
       <section className="w-full bg-white">
-        <div className="w-full px-10 py-10 h-full" style={{color: textBlock.contentTextColour}}>
+        <div className="px-24 h-full md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed" style={{color: textBlock.contentTextColour}}>
           {documentToReactComponents(textBlock.content.json)}
         </div>
       </section>

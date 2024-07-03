@@ -14,5 +14,9 @@ export async function generateStaticParams() {
 
 export default async function KnowledgeArticle({params}: {params: {slug: string}}) {
   // see if we are on draft preview mode
-    return <Article slug={params.slug} />
+    return (
+      <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white">
+        <Article slug={params.slug} />
+      </main>
+    )
 }

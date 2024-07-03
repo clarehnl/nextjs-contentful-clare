@@ -15,21 +15,23 @@ export default async function HeroBanner({slug}: {slug: string}) {
     }
 
     return (
-    <main className="flex min-h-screen flex-col items-center p-24 bg-white">
-        <div id="generic-hero-banner" className="flex items-center bg-cover bg-no-repeat bg-center w-screen h-svh" style={heroImageStyling}>
-            <div className="m-30 text-center" style={{backgroundColor: heroBanner.heroBackground ? "none" : "rgba(255,255,255,.9)"}}>
+    <section className="flex min-h-screen flex-col items-center px-24 pt-24 bg-white">
+        <div id="generic-hero-banner" className="flex items-center bg-cover bg-no-repeat bg-center w-screen h-[700px]" style={heroImageStyling}>
+            <div className="m-30 px-16 text-center" style={{backgroundColor: heroBanner.heroBackground ? "none" : "rgba(255,255,255,.9)"}}>
                 <h1 className="text-5xl font-extrabold" style={{color: heroBanner.heroHeadlineColour}}>{heroBanner.heroHeadline}</h1>
-                <div className="px-6 py-6" style={{color: heroBanner.descriptionTextColour ? "grey": "white"}}>{documentToReactComponents(heroBanner.headlineDescription.json)}</div>
+                <div className="px-32 py-6 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed" style={{color: heroBanner.descriptionTextColour ? "grey": "white"}}>
+                    {documentToReactComponents(heroBanner.headlineDescription.json)}
+                </div>
                 <a href={heroBanner.heroBlockButton.buttonLink}>
                     <button type="button" className="select-none rounded-lg bg-orange-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-50 transition-all hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                         {heroBanner.heroBlockButton.buttonText}
                     </button>
                 </a>
-                <div className="flex items-center justify-center text-center pt-6">
+                <div className="flex items-center justify-center text-center pt-6 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     <p className="pr-1" style={{color: heroBanner.phoneNumberPreferTalkTextColour}}>{heroBanner.phoneNumberPreferTalkText}</p>
                     <p className="pl-1" style={{color: heroBanner.phoneNumberTextColour}}>{heroBanner.phoneNumber}</p>
                 </div>
-                <div className="flex justify-center pt-6">
+                <div className="flex justify-center pt-6 md:text-l/relaxed lg:text-base/relaxed xl:text-l/relaxed">
                 <Image
                     alt="Article Image"
                     className="pr-1"
@@ -41,6 +43,6 @@ export default async function HeroBanner({slug}: {slug: string}) {
                 </div>
             </div>
         </div>
-    </main>
+    </section>
   )
 }
