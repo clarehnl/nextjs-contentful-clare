@@ -20,17 +20,20 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Available Pages to view
 
-To learn more about Next.js, take a look at the following resources:
+This POC project is currently being hosted by Vercel.
+You can visit the page here: https://nextjs-contentful-clare-oa4dtnhao-clareahnems-projects.vercel.app/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Some pages to check out are;
+- `/` 
+    - root page was created by following the documentation provided by contentful: https://www.contentful.com/blog/integrate-contentful-next-js-app-router/
+    - This page will display the list of blog contents that is available to view
+    - by clicking on the blog component, you will be able to view the full blog content `/articles/{unique-article-slug}`
+- `/hero-banner`
+    - this will lead you to the generic hero banner block that has been replicated from the existing iselect-wp-repository
+- `/flexible-page/{unique-flexiblePage-slug}`
+    - This is a page with flexible page contents. It can take in multiple component blocks that have been created.
+    - currently, we have `/flexible-page/first-flexible-page` working, which includes the generic hero banner, some text blocks and a blog article
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
